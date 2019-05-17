@@ -1,0 +1,42 @@
+#!/bin/bash
+option=$1
+cheat_name=$2
+FILE=~/.cheat/$cheat_name
+
+# Create new cheat ie. file
+if [ "$option" == "-c" ] 
+then
+    if [ ! -f $FILE ] 
+    then
+        touch $FILE
+        echo -e "\e[1;32mcreated\e[0m $cheat_name"
+    else
+        echo -e "\e[1;31merror : '$cheat_name' already exists\e[0m" 
+    fi
+# Add new command in cheat
+elif [ "$option" == "-a" ]
+then
+    read -p "command:" command
+    read -p "comment:" comment
+    echo "#$comment" >> "$FILE"
+    echo "$command" >> "$FILE"
+    echo "----------" >> "$FILE"
+    echo -e "\e[1;32madded\e[0m"
+# Show cheat
+elif [ "$option" == "-s" ]
+then
+    cat $FILE 
+# Edit the file
+elif [ "$option" == "-e" ] 
+then
+    vim $FILE
+# Remove cheat
+elif [ "$option" == "-d" ]
+then
+    echo "option disabled for safety"
+    echo "remove manually"
+    #rm $FILE
+    #echo "$cheat_name deleted" 
+fi
+
+
