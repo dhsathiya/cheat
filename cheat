@@ -30,6 +30,19 @@ then
 elif [ "$option" == "-e" ] 
 then
     vim $FILE
+elif [ "$option" == "-h" ]
+then 
+    echo "Syntax"
+    echo "       cheat command <cheat name>"
+    echo "command"
+    echo "       -c    create new cheat-sheet"
+    echo "       -a    add command and comment to the cheat-sheet"
+    echo "       -s    show cheat-sheet"
+    echo "       -e    edit cheat-sheet [vim]"
+    echo "       -h    help"
+    echo "       -d    delete a cheat-sheet [disabled by default]"
+    echo "Storage location"
+    echo "       ~/.cheat"
 # Remove cheat
 elif [ "$option" == "-d" ]
 then
