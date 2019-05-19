@@ -2,7 +2,8 @@
 
 option=$1
 cheat_name=$2
-FILE=~/.cheat/$cheat_name
+cheat_root=~/.cheat
+FILE=$cheat_root/$cheat_name
 
 # Create new cheat ie. file
 if [ "$option" == "-c" ] || [ "$option" == "create" ]
@@ -11,6 +12,9 @@ then
     then
         touch $FILE
         echo -e "\e[1;32mcreated\e[0m $cheat_name"
+        echo -e "================================" >> "$FILE"
+        echo -e "$cheat_name                     " >> "$FILE"
+        echo -e "================================" >> "$FILE"
     else
         echo -e "\e[1;31merror : '$cheat_name' already exists\e[0m" 
     fi
@@ -27,6 +31,10 @@ then
 elif [ "$option" == "-s" ] || [ "$option" == "show" ]
 then
     cat $FILE 
+# Show all cheats
+elif [ "$option" == "-sa" ] || [ "$option" == "showall" ]
+then
+    cat $cheat_root/*
 # Edit the file
 elif [ "$option" == "-e" ] || [ "$option" == "edit" ] 
 then
@@ -53,4 +61,3 @@ then
     #rm $FILE
     #echo "$cheat_name deleted" 
 fi
-
