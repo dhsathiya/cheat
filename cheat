@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#complete -W "-c    create \n -a add" cheat
-
 option=$1
 cheat_name=$2
 cheat_root=~/.cheat
