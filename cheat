@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#complete -W "-c    create \n -a add" cheat
+
 option=$1
 cheat_name=$2
 cheat_root=~/.cheat
@@ -45,12 +47,13 @@ then
     echo "Syntax"
     echo "       cheat command <cheat name>"
     echo "command"
-    echo "       -c    create new cheat-sheet"
-    echo "       -a    add command and comment to the cheat-sheet"
-    echo "       -s    show cheat-sheet"
-    echo "       -e    edit cheat-sheet [vim]"
-    echo "       -h    help"
-    echo "       -d    delete a cheat-sheet [disabled by default]"
+    echo "       -c     create     create new cheat-sheet"
+    echo "       -a     add        add command and comment to the cheat-sheet"
+    echo "       -s     show       show cheat-sheet"
+    echo "       -sa    showall    show all cheat-sheet"
+    echo "       -e     edit       edit cheat-sheet [vim]"
+    echo "       -h     --         help"
+    echo "       -d     --         delete a cheat-sheet [disabled by default]"
     echo "Storage location"
     echo "       ~/.cheat"
 # Remove cheat
@@ -61,3 +64,4 @@ then
     #rm $FILE
     #echo "$cheat_name deleted" 
 fi
+
