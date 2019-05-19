@@ -16,4 +16,14 @@ help command
 ```
 cheat -h
 ```
+## Autocomplete
+1. Copy `autocomplete.sh` file in your system.
+2. Run this following command : `source /path/to/your/autocomplete.sh`
+
+If you are using zsh terminal then run these commands to init bash autoload
+```
+autoload bashcompinit
+bashcompinit
+```
+example : `cheat <tab> <tab>`
 
