@@ -39,7 +39,8 @@ bashcompinit
 ```
 example : `cheat <tab> <tab>`
 
-- Bug
+- Bug:
+
 autocomplete won't work in a new session. Have to find a fix.
 
 ---
