@@ -30,7 +30,9 @@ then
 # Show cheat
 elif [ "$option" == "-s" ] || [ "$option" == "show" ]
 then
+    echo -en "\033[1m"
     cat $FILE 
+    echo -en "\033[0m"
 # Show all cheats
 elif [ "$option" == "-sa" ] || [ "$option" == "showall" ]
 then
