@@ -1,4 +1,7 @@
 # cheat
+
+![cheat](./images/pixil-frame-0(4).png) 
+
 A handy tool to create and manage your own cheat-sheets
 
 ## Installation
